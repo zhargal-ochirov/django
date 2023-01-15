@@ -1,0 +1,12 @@
+<h1>Профиль: {{ user.first_name }}</h1>
+<h2>Ваши заказы:</h2>
+<div>
+    {% for order in user_orders %}
+    <p>Номер заказа:{{ order.id }}</p>
+    <p>1</p>
+        {% for items in order_items %}
+            <p>{{items.product.name}}</p>
+            <p>2</p>
+        {% endfor %}
+    {% endfor %}
+</div>
